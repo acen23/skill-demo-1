@@ -15,7 +15,11 @@ public class NumAList{
 
     // BUG: Should not reference the same input array! Instead copy contents to duplicate array.
     public NumAList(int[] list){
-        this.list = list;
+        int[] newList = new int[list.length];
+        for(int i=0; i<list.length; i++){
+            newList[i] = list[i];
+        }
+        this.list = newList;
         this.size = list.length;
     }
 
